@@ -1,0 +1,96 @@
+/*body {
+  background: hsl(159, 38%, 67%);
+}*/
+/*------- Reset---------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: nome;
+}
+img {
+  width: 100%0;
+  height: auto;
+}
+/*---- variables------*/
+.root {
+  --bue: 159;
+  --base_color: hsl(var(--bue) 36% 57%);
+  --base_color_second: hls(var(--bue) 65% 88%);
+  --base_color_alt: hsl(var(var(--bue) 57% 53%));
+  --title_color: hsl(var(--bue) 41% 10%);
+  --text_color: hsl(0 0% 46%);
+  --text_color_rigth: hsl(0 0% 98%);
+  --body_color: hsl(0 0% 98%);
+}
+
+/*----------Base---------*/
+
+body {
+  font: 400 1rem 'DM Sans', sans-serif;
+  color: var(--text_color);
+  background: var(--body_color);
+  -webkit-font-smoothing: antialiased;
+}
+h1 {
+  font: 700 1.85rem 'poppins';
+  color: var(--title_color);
+  -webkit-font-smoothing: antialiased;
+}
+button {
+}
+/*-----Layout------*/
+#header {
+  border-bottom: 1px solid #e4e4e4;
+}
+nav {
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font: 700 1.31rem 'poppins', sans-serif;
+  color: var(--title_color);
+}
+.logo span {
+  color: var(--base_color);
+}
+.container {
+  width: 100%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.grid {
+  display: 5rem 0;
+  gap: 2rem;
+}
+.section {
+  padding: 5rem 0;
+}
+/*-----Home -----*/
+#home.container {
+  margin: 0;
+}
+#home .image {
+  position: relative;
+}
+#home .image::before {
+  content: 'qualquer  coisa';
+  height: 100%;
+  width: 100%;
+  background: red;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+#home .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+#home .imgage img {
+  position: relative;
+  right: 2.93rem;
+}
