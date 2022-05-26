@@ -16,7 +16,7 @@ img {
 }
 /*---- variables------*/
 .root {
-  --bue: 159;
+  --bue: 240;
   --base_color: hsl(var(--bue) 36% 57%);
   --base_color_second: hls(var(--bue) 65% 88%);
   --base_color_alt: hsl(var(var(--bue) 57% 53%));
@@ -40,10 +40,34 @@ h1 {
   -webkit-font-smoothing: antialiased;
 }
 button {
+  background-color: var(--base_color);
+  color: var(--text_color-light);
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: 500 1rem;
+  transition: background 0.3s;
+}
+.button:hover {
+  background: var(--base_color_alt);
+}
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var (--hue) 36%, 57%, 1) 0% hsla(var(--hue) 65%, 88%, 0.34) 100%
+  );
 }
 /*-----Layout------*/
 #header {
   border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
+  display: flex;
+
+  width: 100%;
+  position: fixed;
 }
 nav {
   height: 4.5rem;
@@ -71,6 +95,9 @@ nav {
   padding: 5rem 0;
 }
 /*-----Home -----*/
+#home {
+  overflow: hidden;
+}
 #home.container {
   margin: 0;
 }
@@ -81,16 +108,28 @@ nav {
   content: 'qualquer  coisa';
   height: 100%;
   width: 100%;
-  background: red;
+  background: var(--base_color_second);
   position: absolute;
-  top: 0;
-  z-index: 1;
+  top: -16%;
+  left: 16.7%;
+  z-index: 0;
 }
 #home .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  text-align: center;
 }
-#home .imgage img {
+#home .image img {
   position: relative;
   right: 2.93rem;
+}
+#home .image::before {
+  border-radius: 0.25rem;
+}
+#home .text p {
+  margin-bottom: 2rem;
+  max-width: 100%;
+}
+#home .text h1 {
+  margin-bottom: 1rem;
 }
