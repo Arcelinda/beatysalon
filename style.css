@@ -15,7 +15,9 @@ img {
   height: auto;
 }
 /*---- variables------*/
-.root {
+:root {
+  --header-right: 4.5 rem;
+
   --bue: 240;
   --base_color: hsl(var(--bue) 36% 57%);
   --base_color_second: hls(var(--bue) 65% 88%);
@@ -68,12 +70,17 @@ button {
 
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100%;
+  background-color: var(--base_color);
 }
 nav {
-  height: 4.5rem;
+  height: var(--header-right);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 .logo {
   font: 700 1.31rem 'poppins', sans-serif;
@@ -82,8 +89,11 @@ nav {
 .logo span {
   color: var(--base_color);
 }
+main {
+  margin-top: var(--header-right);
+}
+
 .container {
-  width: 100%;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
@@ -131,5 +141,5 @@ nav {
   max-width: 100%;
 }
 #home .text h1 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
